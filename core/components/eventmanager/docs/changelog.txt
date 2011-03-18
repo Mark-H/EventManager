@@ -3,4 +3,4 @@ EventManager Changelog
 
 Latest release
 ====================================================
-Initial commit.
+Initial commit. 
