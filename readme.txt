@@ -22,7 +22,13 @@
  *
  * @package EventManager
  */
-  $path = MODX_CORE_PATH . 'components/eventmanager/';
-  $package = $modx->addPackage('eventmanager',$path . 'model/');
-  if (!$package) { return '<p>Fatal error: unable to load eventManager package.</p>'; }
-?>
+ 
+EventManager is a component for MODX intended to make managing events easy. It allows
+for making reservations online (no payment though) which are automatically entered
+into a database and linked to the event. In the back-end component you can manage
+your events, the capacity and any reservations for that event.
+
+By using snippets you can display the events in any way using chunks to template them.
+
+EventManager is far from finished / ready for the public, but feel free to fork, try it
+out and report back. :)
