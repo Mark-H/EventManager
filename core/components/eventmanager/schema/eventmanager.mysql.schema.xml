@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="eventManager" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1" phpdoc-package="eventManager" phpdoc-subpackage="model">
+	<object class="Events" table="em_events" extends="xPDOObject">
+		<field key="eventid" dbtype="int" precision="11" phptype="integer" null="false" index="pk" generated="native" />
+		<field key="title" dbtype="varchar" precision="200" phptype="string" null="false" />
+		<field key="description" dbtype="varchar" precision="2000" phptype="string" null="false" />
+		<field key="date" dbtype="int" precision="15" phptype="integer" null="false" />
+		<field key="capacity" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="last_signup" dbtype="int" precision="10" phptype="integer" null="true" />
+		<index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+			<column key="eventid" collation="A" null="false" />
+		</index>  
+		<composite alias="Reservations" class="Reservations" local="eventid" foreign="eventid" cardinality="many" owner="local" />
+	</object>
+	<object class="Reservations" table="em_reservations" extends="xPDOObject">
+		<field key="reservationid" dbtype="int" precision="11" phptype="integer" null="false" index="pk" generated="native" />
+		<field key="eventid" dbtype="int" precision="10" phptype="integer" null="false" />
+		<field key="tickets" dbtype="int" precision="10" phptype="integer" null="false" />
+		<field key="firstname" dbtype="varchar" precision="200" phptype="string" null="false" />
+		<field key="lastname" dbtype="varchar" precision="200" phptype="string" null="false" />
+		<field key="time" dbtype="int" precision="15" phptype="integer" null="false" />
+		<field key="address" dbtype="varchar" precision="500" phptype="string" null="false" />
+		<field key="email" dbtype="varchar" precision="200" phptype="string" null="false" />
+		<field key="remarks" dbtype="varchar" precision="2000" phptype="string" null="false" />
+		<field key="phone" dbtype="varchar" precision="30" phptype="string" null="false" />
+		<index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+			<column key="reservationid" collation="A" null="false" />
+		</index>
+		<composite alias="Events" class="Events" local="eventid" foreign="eventid" cardinality="one" owner="foreign" />
+	</object>
+</model>
