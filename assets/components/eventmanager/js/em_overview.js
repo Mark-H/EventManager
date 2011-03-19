@@ -30,7 +30,7 @@ EventManager.overview = function(config) {
 		border: false,
 		baseCls: 'modx-formpanel',
 		items: [{
-			html: '<h2>'+_('eventManager')+'</h2>',
+			html: '<h2>'+_('eventmanager')+'</h2>',
 			border: false,
 			cls: 'modx-page-header'
 		},{
@@ -39,22 +39,22 @@ EventManager.overview = function(config) {
             ,defaults: { border: false, autoHeight: true, bodyStyle: 'padding: 10px' }
             ,border: true
             ,items: [{
-                title: _('eventManager.current')
+                title: _('eventmanager.current')
                 ,defaults: { border: false, autoHeight: true, bodyStyle: 'padding-bottom: 10px' }
                 ,items: [{
-                    html: '<p>'+_('eventManager.current.description')+'</p>'
+                    html: '<p>'+_('eventmanager.current.description')+'</p>'
                 },{  
-					html: '<p>'+_('eventManager.current.howtouse')+'</p>'
+					html: '<p>'+_('eventmanager.current.howtouse')+'</p>'
 				},{
 					xtype: 'eventmanager-events-current'
 				}]
             },{
-                title: _('eventManager.past')
+                title: _('eventmanager.past')
                 ,defaults: { border: false, autoHeight: true, bodyStyle: 'padding-bottom: 10px' }
                 ,items: [{
-                    html: '<p>'+_('eventManager.past.description')+'</p>'
+                    html: '<p>'+_('eventmanager.past.description')+'</p>'
                 },{ 
-					html: '<p>'+_('eventManager.past.howtouse')+'</p>'
+					html: '<p>'+_('eventmanager.past.howtouse')+'</p>'
 				}]
             }]
         }]
@@ -79,7 +79,7 @@ EventManager.events.current = function(config) {
 		,primaryKey: 'eventid'
 		,items: [{
 			xtype: 'tbbutton' 
-			,text: _('eventManager.toolbar.newevent')
+			,text: _('eventmsnager.toolbar.newevent')
 			,handler: function(btn,e) {
 				if (typeof newEventWindow == 'undefined') {
 					newEventWindow = MODx.load({
@@ -97,33 +97,33 @@ EventManager.events.current = function(config) {
 
 		}]
 		,columns: [{
-			header: _('eventManager.event.eventid') 
+			header: _('eventmanager.event.eventid') 
 			,dataIndex: 'eventid'
 			,sortable: true
 			,width: 4
 			,hidden: true
 		},{
-			header: _('eventManager.event.title') 
+			header: _('eventmanager.event.title') 
 			,dataIndex: 'title'
 			,sortable: true
 			,width: 14
 		},{
-			header: _('eventManager.event.description') 
+			header: _('eventmanager.event.description') 
 			,dataIndex: 'description'
 			,sortable: true
 			,width: 20
 		},{
-			header: _('eventManager.event.date')
+			header: _('eventmanager.event.date')
 			,dataIndex: 'date'
 			,sortable: true
 			,width: 16
 		},{
-			header: _('eventManager.event.capacity') // Max reservations
+			header: _('eventmanager.event.capacity') // Max reservations
 			,dataIndex: 'capacity'
 			,sortable: true
 			,width: 18
 		},{
-			header: _('eventManager.event.last_signup') // Time until a reservation can be made
+			header: _('eventmanager.event.last_signup') // Time until a reservation can be made
 			,dataIndex: 'last_signup'
 			,sortable: true
 			,width: 18
@@ -132,9 +132,9 @@ EventManager.events.current = function(config) {
 			'cellcontextmenu': function(grid, row, col, eventObj){
 				var _contextMenu = new Ext.menu.Menu({
 					items: [{
-						text: _('eventManager.cm.viewreservations') 
+						text: _('eventmanager.cm.viewreservations') 
 					},'-',{
-						text: _('eventManager.cm.modify')
+						text: _('eventmanager.cm.modify')
 						,handler: function(grid, row, col, eventObj) {
 							if (typeof updateEventWindow == 'undefined') {
 								updateEventWindow = MODx.load({
@@ -152,11 +152,11 @@ EventManager.events.current = function(config) {
 							updateEventWindow.show(); 
 						}
 					},{
-						text: _('eventManager.cm.duplicate')
+						text: _('eventmanager.cm.duplicate')
 					},'-',{
-						text: _('eventManager.cm.delete') 
+						text: _('eventmanager.cm.delete') 
 						,handler: function() {
-							Ext.Msg.confirm(_('eventManager.cm.delete'),'Are you sure you want to delete this event?',function (btn,text) {
+							Ext.Msg.confirm(_('eventmanager.cm.delete'),'Are you sure you want to delete this event?',function (btn,text) {
 								//console.log(btn);
 								if (btn == 'yes') {
 									/*url: MODx.config.assets_url+'components/eventmanager/connector.php'
@@ -187,7 +187,7 @@ Ext.reg('eventmanager-events-current',EventManager.events.current);
 EventManager.window.newEvent = function(config) {
     config = config || {};
     Ext.applyIf(config,{
-        title: _('eventManager.toolbar.newevent')
+        title: _('eventmanager.toolbar.newevent')
         ,url: MODx.config.assets_url+'components/eventmanager/connector.php'
         ,baseParams: {
             action: 'newevent'
@@ -198,26 +198,26 @@ EventManager.window.newEvent = function(config) {
             ,name: 'id'
         },*/{
             xtype: 'textfield'
-            ,fieldLabel: _('eventManager.event.title')
+            ,fieldLabel: _('eventmanager.event.title')
             ,name: 'title'
             ,anchor: '90%'
 			,allowBlank: false
         },{
             xtype: 'textarea'
-            ,fieldLabel: _('eventManager.event.description')
+            ,fieldLabel: _('eventmanager.event.description')
             ,name: 'description'
             ,anchor: '90%'
 			,allowBlank: false
         },{
             xtype: 'datefield'
-            ,fieldLabel: _('eventManager.event.date')
+            ,fieldLabel: _('eventmanager.event.date')
             ,name: 'date-date'
             ,anchor: '90%'
 			,format: 'Y-m-d'
 			,allowBlank: false
         },{
             xtype: 'timefield'
-            ,fieldLabel: _('eventManager.event.time')
+            ,fieldLabel: _('eventmanager.event.time')
             ,name: 'date-time'
             ,anchor: '90%'
 			,format: 'H:i:s'
@@ -225,13 +225,13 @@ EventManager.window.newEvent = function(config) {
             //,submitValue: false
         },{
 			xtype: 'numberfield'
-			,fieldLabel: _('eventManager.event.capacity')
+			,fieldLabel: _('eventmanager.event.capacity')
 			,name: 'capacity'
 			,anchor: '90%'
 			,minValue: 0
 		},{
 			xtype: 'numberfield'
-			,fieldLabel: _('eventManager.event.last_signup.hours')
+			,fieldLabel: _('eventmanager.event.last_signup.hours')
 			,name: 'last_signup'
 			,anchor: '90%'
 			,minValue: 0
@@ -247,7 +247,7 @@ Ext.reg('eventmanager-new-event',EventManager.window.newEvent);
 EventManager.window.updateEvent = function(config) {
     config = config || {};
     Ext.applyIf(config,{
-        title: _('eventManager.cm.modify')
+        title: _('eventmanager.cm.modify')
 		,id: 'updateEventForm'
         ,url: MODx.config.assets_url+'components/eventmanager/connector.php'
         ,baseParams: {
@@ -259,26 +259,26 @@ EventManager.window.updateEvent = function(config) {
             ,name: 'eventid'
         },{
             xtype: 'textfield'
-            ,fieldLabel: _('eventManager.event.title')
+            ,fieldLabel: _('eventmanager.event.title')
             ,name: 'title'
             ,anchor: '90%'
 			,allowBlank: false
         },{
             xtype: 'textarea'
-            ,fieldLabel: _('eventManager.event.description')
+            ,fieldLabel: _('eventmanager.event.description')
             ,name: 'description'
             ,anchor: '90%'
 			,allowBlank: false
         },{
             xtype: 'datefield'
-            ,fieldLabel: _('eventManager.event.date')
+            ,fieldLabel: _('eventmanager.event.date')
             ,name: 'date-date'
             ,anchor: '90%'
 			,format: 'Y-m-d'
 			,allowBlank: false
         },{
             xtype: 'timefield'
-            ,fieldLabel: _('eventManager.event.time')
+            ,fieldLabel: _('eventmanager.event.time')
             ,name: 'date-time'
             ,anchor: '90%'
 			,format: 'H:i:s'
@@ -286,13 +286,13 @@ EventManager.window.updateEvent = function(config) {
             //,submitValue: false
         },{
 			xtype: 'numberfield'
-			,fieldLabel: _('eventManager.event.capacity')
+			,fieldLabel: _('eventmanager.event.capacity')
 			,name: 'capacity'
 			,anchor: '90%'
 			,minValue: 0
 		},{
 			xtype: 'numberfield'
-			,fieldLabel: _('eventManager.event.last_signup.hours')
+			,fieldLabel: _('eventmanager.event.last_signup.hours')
 			,name: 'last_signup'
 			,anchor: '90%'
 			,minValue: 0
