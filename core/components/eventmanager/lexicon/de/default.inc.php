@@ -30,12 +30,12 @@ $_lang['eventmanager.description'] = 'Verwalten Sie Ihre Veranstaltungen und Res
 
 /* Current tab */
 $_lang['eventmanager.current'] = 'Aktuelle Veranstaltungen';
-$_lang['eventmanager.current.description'] = 'Hier finden Sie eine Übersicht der aktuellen und bevorstehenden Veranstaltungen. Vergangene Veranstaltungen sind für bessere Übersicht in einem separaten Tab geführt.';
-$_lang['eventmanager.current.howtouse'] = 'Die untenstehende Liste zeigt alle relevanten Details. Um Veranstaltungsdetails zu ändern oder zu sehen, wie viele Reservierungen bereits gebucht wurden, klicken Sie per Rechtsklick auf die gewünschte Veranstaltung.';
+$_lang['eventmanager.current.description'] = 'Hier finden Sie eine Übersicht der aktuellen und bevorstehenden Veranstaltungen. Vergangene Veranstaltungen sind zur besseren Übersicht in einem separaten Tab geführt.';
+$_lang['eventmanager.current.howtouse'] = 'Die untenstehende Liste zeigt alle relevanten Veranstaltungsdetails. Um Details zu ändern oder zu sehen, wie viele Reservierungen bereits gebucht wurden, klicken Sie per Rechtsklick auf die gewünschte Veranstaltung.';
 
 /* Past tab */
 $_lang['eventmanager.past'] = 'Vergangene Veranstaltungen';
-$_lang['eventmanager.past.description'] = 'Hier finden Sie eine Übersicht der vergangenen Veranstaltungen (länger als 24 Stunden vorbei).';
+$_lang['eventmanager.past.description'] = 'Hier finden Sie eine Übersicht der vergangenen Veranstaltungen (vor über 24 Stunden beendet).';
 $_lang['eventmanager.past.howtouse'] = 'Sie können die gebuchten Reservierungen der Veranstaltung per Rechtsklick einsehen.';
 
 /* Grid headers (Current + Past tab) */

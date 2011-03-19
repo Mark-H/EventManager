@@ -44,7 +44,7 @@ $_lang['eventmanager.event.date'] = 'Event date';
 $_lang['eventmanager.event.time'] = 'Event time';
 $_lang['eventmanager.event.capacity'] = 'Capacity';
 $_lang['eventmanager.event.last_signup'] = 'Sign up closes';
-$_lang['eventmanager.event.last_signup.hours'] = 'Sign up X hours in advacne';
+$_lang['eventmanager.event.last_signup.hours'] = 'Sign up X hours in advance';
 
 /* Context menu */
 $_lang['eventmanager.cm.viewreservations'] = 'View reservations';
