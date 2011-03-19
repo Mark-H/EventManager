@@ -2,10 +2,9 @@
 /*
  * EventManager
  *
- * Copyright 2010-2011 by Mark Hamstra (www.markhamstra.nl)
+ * Copyright 2010-2011 by Mark Hamstra (contact via www.markhamstra.nl)
  *
- * This file is part of EventManager, a MODX Revolution addon to manage events
- * and event reservations.
+ * This file is part of EventManager, a tool to manage events and reservations for MODX.
  *
  * EventManager is free software; you can redistribute it and/or modify it under the
  * terms of the GNU General Public License as published by the Free Software
@@ -17,10 +16,11 @@
  * A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with
- * VersionX; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
+ * EventManager; if not, write to the Free Software Foundation, Inc., 59 Temple Place,
  * Suite 330, Boston, MA 02111-1307 USA
  *
  * @package EventManager
+ * @sub-package lexicon-en
  */
  
 $_lang['eventManager'] = 'Event Manager';
