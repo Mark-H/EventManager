@@ -1,0 +1,3 @@
+EventManager is a free addon developed by Mark Hamstra (http://www.markhamstra.nl) for the MODX Content Management Framework. It has been designed to provide a solid and flexible way of managing events and reservations on your MODX powered website.
+
+EventManager allows you to add events, and through the use of FormIt (MODX Form Processing addon) allow visitors to sign up for your events. By making smart use of the FormIt snippet you will also be able of sending them a confirmation email with further information.

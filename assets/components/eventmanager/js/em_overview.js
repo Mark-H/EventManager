@@ -79,7 +79,7 @@ EventManager.events.current = function(config) {
 		,primaryKey: 'eventid'
 		,items: [{
 			xtype: 'tbbutton' 
-			,text: _('eventmsnager.toolbar.newevent')
+			,text: _('eventmanager.toolbar.newevent')
 			,handler: function(btn,e) {
 				if (typeof newEventWindow == 'undefined') {
 					newEventWindow = MODx.load({
