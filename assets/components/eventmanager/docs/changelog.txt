@@ -3,4 +3,5 @@ EventManager Changelog
 
 Latest release
 ====================================================
+Available in English, German and French. Included chunks are in Dutch.
 Initial release.
