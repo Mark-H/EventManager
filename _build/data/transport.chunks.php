@@ -16,11 +16,11 @@ $chunks[1]->fromArray(array(
    &emailTpl=`emReservationEmail`
    &emailTo=`[[+email]]`
    &emailSubject=`Uw online reservering`
-   &emailFrom=`reservering@mfc-vlechtwerk.nl`
-   &emailFromName=`MFC t Vlechtwerk - Reserveringen`
-   &emailReplyTo=`info@mfc-vlechtwerk.nl`
-   &emailReplyToName=`MFC t Vlechtwerk`
-   &emailBCC=`business@markhamstra.nl`
+   &emailFrom=`<snip>`
+   &emailFromName=`<snip>`
+   &emailReplyTo=`<snip>`
+   &emailReplyToName=`<snip>`
+   &emailBCC=`<snip>`
    &redirectTo=`15`
    &validate=`name:required,
       email:email:required,
@@ -110,10 +110,10 @@ $chunks[4]->fromArray(array(
     'id' => 4,
     'name' => 'emReservationEmail',
     'description' => 'Reservation mail to the customer',
-    'snippet' => '<p><em>Dit bericht is automatisch gegenereerd. Neem bij vragen contact op met het beheer van MFC \'t Vlechtwerk via 0561 - 430 641 of <a href="mailto:info@mfc-vlechtwerk.nl">per email</a>.</em></p>
+    'snippet' => '<p><em>Dit bericht is automatisch gegenereerd. Neem bij vragen contact op met het beheer van <snip>.</em></p>
 <p>Beste [[+firstname:notempty=`[[+firstname]] [[+lastname]]`]],
   <br />
-  <br />Bedankt voor uw reservering voor "[[+event.title]]" op [[+event.date:date=`%e %B %Y`]] in MFC \'t Vlechtwerk. Door middel van deze e-mail bevestigen wij uw reservering in ons geautomatiseerd reserverings systeem.
+  <br />Bedankt voor uw reservering voor "[[+event.title]]" op [[+event.date:date=`%e %B %Y`]] in <snip>. Door middel van deze e-mail bevestigen wij uw reservering in ons geautomatiseerd reserverings systeem.
   <br />
   <br />De volgende gegevens zijn bij ons bekend:
   <br />- Activiteit: [[+event.title]]
@@ -130,7 +130,7 @@ $chunks[4]->fromArray(array(
   <br />
   <br />Nogmaals bedankt voor uw reservering, en graag tot [[+event.date:date=`%e %B %Y`]]!
   <br />
-  <br /><em>MFC \'t Vlechtwerk - Mandehof 16 - 8391 BG Noordwolde (Friesland) - 0561 430 641 - info@mfc-vlechtwerk.nl</em></p>',
+  <br /><em><snip></em></p>',
     'properties' => '',
 ),'',true,true);
 
