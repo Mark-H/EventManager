@@ -1,11 +1,8 @@
 <?php
-	function jsonError($msg, &$mdx) {
-		return $mdx->toJSON(array('success' => false,'message' => $msg,'total' => 0,'data' => array(),'object' => array()));
-	}
-	
+
 	$date = $_POST['date-date'].' '.$_POST['date-time'];
 	$date2 = (date('m',$date) > 0) ? strtotime($date) : ''; 
-	if ($date2 == '') { return jsonError('Unable to parse date: '.$date,$modx); }
+	if ($date2 == '') { return $modx->error->failure('Unable to parse date: '.$date); }
 	
 	$p = array(
 		'title' => $_POST['title'],
@@ -19,6 +16,6 @@
 	if ($ne->save()) {
 		return $modx->toJSON(array('success' => true,'message' => 'Succesfully saved the event data.','total' => 0,'data' => array(),'object' => array()));
 	} else {
-		return jsonError('Unknown error. '.serialize($p));
+		return $modx->error->failure('Unknown error. '.serialize($p));
 	}
 ?>
